@@ -5,8 +5,8 @@ class TokenInfoIcons {
         if (actor === undefined) return;
 
         let ac = 10
-        if (game.world.data.system === "pf1") {
-            ac = actor.data.data.attributes.ac.normal.total
+        if (game.world.data.system === "worldbuilding") {
+            ac = actor.data.data.attributes.ac.value
         } else {
             ac = (isNaN(parseInt(actor.data.data.attributes.ac.value)) || parseInt(actor.data.data.attributes.ac.value) === 0) ? 10 : parseInt(actor.data.data.attributes.ac.value);
         }
